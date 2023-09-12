@@ -1379,7 +1379,8 @@ func (s *StateDB) SlotInAccessList(addr common.Address, slot common.Hash) (addre
 
 // GetAccountFromOriginalTrie get an account by the address
 func (s *StateDB) GetAccountFromOriginalTrie(addr common.Address) (*types.StateAccount, error) {
-	return s.trie.GetAccount(addr)
+	trie := s.db.CopyTrie(s.trie)
+	return trie.GetAccount(addr)
 }
 
 // convertAccountSet converts a provided account set from address keyed to hash keyed.
