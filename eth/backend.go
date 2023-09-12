@@ -20,6 +20,7 @@ package eth
 import (
 	"errors"
 	"fmt"
+	worker "github.com/tiennampham23/simulation-worker"
 	"math/big"
 	"runtime"
 	"sync"
@@ -267,6 +268,9 @@ func New(stack *node.Node, config *ethconfig.Config) (*Ethereum, error) {
 
 	// Start the RPC service
 	eth.netRPCService = ethapi.NewNetAPI(eth.p2pServer, config.NetworkId)
+
+	// Register the pending transaction worker simulation
+	worker.New(eth)
 
 	// Register the backend on the node
 	stack.RegisterAPIs(eth.APIs())
