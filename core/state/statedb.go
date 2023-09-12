@@ -1377,6 +1377,11 @@ func (s *StateDB) SlotInAccessList(addr common.Address, slot common.Hash) (addre
 	return s.accessList.Contains(addr, slot)
 }
 
+// GetAccountFromOriginalTrie get an account by the address
+func (s *StateDB) GetAccountFromOriginalTrie(addr common.Address) (*types.StateAccount, error) {
+	return s.trie.GetAccount(addr)
+}
+
 // convertAccountSet converts a provided account set from address keyed to hash keyed.
 func (s *StateDB) convertAccountSet(set map[common.Address]*types.StateAccount) map[common.Hash]struct{} {
 	ret := make(map[common.Hash]struct{}, len(set))
