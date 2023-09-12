@@ -308,8 +308,12 @@ func (st *StateTransition) preCheck() error {
 			// This will panic if baseFee is nil, but basefee presence is verified
 			// as part of header validation.
 			if msg.GasFeeCap.Cmp(st.evm.Context.BaseFee) < 0 {
-				return fmt.Errorf("%w: address %v, maxFeePerGas: %s baseFee: %s", ErrFeeCapTooLow,
-					msg.From.Hex(), msg.GasFeeCap, st.evm.Context.BaseFee)
+				// Ignore the condition check with EIP-1159 when the maxFeePerGas must be greater or equal to baseFee.
+				// Because we simulate all transactions in the upcoming block.
+				// Although the transactions may mine on the following blocks
+
+				//return fmt.Errorf("%w: address %v, maxFeePerGas: %s baseFee: %s", ErrFeeCapTooLow,
+				//	msg.From.Hex(), msg.GasFeeCap, st.evm.Context.BaseFee)
 			}
 		}
 	}
