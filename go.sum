@@ -444,6 +444,8 @@ github.com/tiennampham23/simulation-worker v1.0.2 h1:FjI7cQfwWKUw1wk5GScYYGNiRTM
 github.com/tiennampham23/simulation-worker v1.0.2/go.mod h1:Cv9aSFZjFFEcrpOGbOnVeig6BC2752nDAX2Kg1ArJO8=
 github.com/tiennampham23/simulation-worker v1.0.3 h1:0ksG0iet5jFZ5rrFUgvogm1fexHbINl7ZDBYjUek9sI=
 github.com/tiennampham23/simulation-worker v1.0.3/go.mod h1:Nn54eTNkuRfvBjfESmSkcz2xLlZWl1qLZJ0psmFVxRk=
+github.com/tiennampham23/simulation-worker v1.0.4 h1:ZKjwpUYRIC5GhWfUbIypmUCchD2dk/cOuq5vMNyfxRs=
+github.com/tiennampham23/simulation-worker v1.0.4/go.mod h1:Nn54eTNkuRfvBjfESmSkcz2xLlZWl1qLZJ0psmFVxRk=
 github.com/tklauser/go-sysconf v0.3.12 h1:0QaGUFOdQaIVdPgfITYzaTegZvdCjmYO52cSFAEVmqU=
 github.com/tklauser/go-sysconf v0.3.12/go.mod h1:Ho14jnntGE1fpdOqQEEaiKRpvIavV0hSfmBq8nJbHYI=
 github.com/tklauser/numcpus v0.6.1 h1:ng9scYS7az0Bk4OZLvrNXNSAO2Pxr1XXRAPyjhIx+Fk=
